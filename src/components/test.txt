@@ -1,0 +1,92 @@
+<div class='body'>
+            <div class="header">
+                <h2>Earnings </h2>
+            </div>
+
+            <div class = 'data-items' >
+
+                <table >
+                <tr >
+                    
+                    <td>
+                    <input type="text" id = 'newincome' placeholder="Income" required />
+                    </td>
+                    <td>
+                    <input type="text" id = 'newnote' placeholder="Label" required />
+                    </td>
+        
+                    <td>
+                    
+                    <div class="add-button" onClick={addData} >
+                        <h1>+</h1>
+                    </div>
+                    
+                    
+                    </td>
+                </tr>
+                </table>
+
+                <table  class="styled-table">
+
+                <thead>
+                    <tr>
+                    <th style={{width:"15%"}} >
+                        Income
+                    </th>
+                    <th style={{width:"50%"}}>
+                        Label
+                    </th>
+                    <th>
+                        Date
+                    </th>
+
+                    <th style={{width:"9%"}}>
+                        Modify
+                    </th>
+
+                    </tr>
+                </thead>
+                
+                <tbody>
+
+                {earnings.map((earning,index) => (
+                    <tr key={index} class="active-row">
+                        <td id = {`income-${index}`} >Rs. {earning.income} </td>
+                        <td id = {`note-${index}`}>{earning.note}</td>
+                        <td>{earning.date}</td>
+                        <td>
+                           {!isupdate?<button onClick={()=>updateData(index)} > edit</button>:<a> save</a>} 
+                            {/* <img class="delete" src="delete.png" />
+                            <img class="delete" src="edit.png" /> */}
+
+                            <button onClick={()=>deleteData(earning.id)} >Delete</button>
+
+                        </td>
+                    </tr>
+
+
+                ))}
+
+                    <tr class="active-row">
+                        <td><input type="text" value='car' disabled /></td>
+                        <td><input type="text" class="label-box" /></td>
+                        <td>20 Jan 2022</td>
+                        <td>
+                            
+                            <img class="delete" src="delete.png" />
+                            <img class="delete" src="edit.png" />
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+        
+
+                </table>
+
+            </div>
+
+            
+
+        </div>

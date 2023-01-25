@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+.body{
+  width: 70vw;
+  background-color: var(--blue);
+  margin: auto ;
+  margin-top: 3% ;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header{
+  color: white;
+  padding: 2rem;
+}
+
+.data-items{
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+
+}
+
+.add-button{
+  /* position: absolute;
+  top : 29%;
+  left: 18%; */
+  background-color:var(--orange);
+  color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button:hover{
+  
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  /* height: 55px;
+  width: 55px; */
+  cursor: pointer;
+}
+
+
+.delete{
+  width: 25px;
+}
+
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    font : 'Inter', sans-serif;
+}
+
+.styled-table thead tr {
+    background-color: var(--blue);
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid var(--blue);
+}
+
+input[type=text] {
+padding:10px;
+border:0;
+box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.label-box{
+width: 100%;
+}
